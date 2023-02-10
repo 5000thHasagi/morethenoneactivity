@@ -27,6 +27,16 @@
         <activity
             android:name=".LoginActivity">
         </activity>
+        <provider
+            android:authorities="com.example.morethenoneactivityapp.fileprovider"
+            android:grantUriPermissions="true"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/files"
+                />
+        </provider>
     </application>
 
 </manifest>
